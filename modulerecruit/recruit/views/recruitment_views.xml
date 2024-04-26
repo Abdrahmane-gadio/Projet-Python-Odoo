@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+        <record id="recruitment_job_action" model="ir.actions.act_window">
+            <field name="name">Recruitment Jobs</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">recruitment.job</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    
+        <menuitem id="menu_recruitment" name="recruit" />
+        <menuitem id="menu_recruitment_jobs" parent="menu_recruitment" name="Jobs" action="recruitment_job_action"/>
+
+        <record id="recruitment_job_form_view" model="ir.ui.view">
+            <field name="name">recruitment.job.form</field>
+            <field name="model">recruitment.job</field>
+            <field name="arch" type="xml">
+                <form string="Recruitment Job">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="requirements"/>
+                            <field name="recruit_id"/>
+                            <field name="status"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="recruitment_job_tree_view" model="ir.ui.view">
+            <field name="name">recruitment.job.tree</field>
+            <field name="model">recruitment.job</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="requirements"/>
+                    <field name="recruit_id"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+
+
+
+
+        <record id="recruitment_candidate_action" model="ir.actions.act_window">
+            <field name="name">Recruitment Candidate</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">recruitment.candidate</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_recruitment" name="recruit" />
+        <menuitem id="menu_recruitment_candidate" parent="menu_recruitment" name="Candidate" action="recruitment_candidate_action"/>
+
+        <record id="recruitment_candidate_form_view" model="ir.ui.view">
+            <field name="name">recruitment.candidate.form</field>
+            <field name="model">recruitment.candidate</field>
+            <field name="arch" type="xml">
+                <form string="Recruitment Candidate">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="job_id"/>
+                            <field name="email"/>
+                            <field name="phone"/>
+                            <field name="experience"/>
+                            <field name="resume" widget="binary"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="recruitment_candidate_tree_view" model="ir.ui.view">
+            <field name="name">recruitment.candidate.tree</field>
+            <field name="model">recruitment.candidate</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="job_id"/>
+                    <field name="email"/>
+                    <field name="phone"/>
+                    <field name="experience"/>
+                    <field name="resume" widget="binary"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+
+
+
+
+
+        <record id="recruitment_department_action" model="ir.actions.act_window">
+            <field name="name">Recruitment Department</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">recruitment.department</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    
+        <menuitem id="menu_recruitment" name="recruit" />
+        <menuitem id="menu_recruitment_department" parent="menu_recruitment" name="department" action="recruitment_department_action"/>
+
+        <record id="recruitment_department_form_view" model="ir.ui.view">
+            <field name="name">recruitment.department.form</field>
+            <field name="model">recruitment.department</field>
+            <field name="arch" type="xml">
+                <form string="Recruitment Department">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="departmentjob"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="recruitment_department_tree_view" model="ir.ui.view">
+            <field name="name">recruitment.department.tree</field>
+            <field name="model">recruitment.department</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="departmentjob"/>
+                </tree>
+            </field>
+        </record>
+        
+
+
+
+
+
+
+        
+    
+</odoo>

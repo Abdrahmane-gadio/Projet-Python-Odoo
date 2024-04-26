@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+<record id="recruitment_recruiteur_action" model="ir.actions.act_window">
+            <field name="name">Recruitment Recruiteur</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">recruitment.recruiteur</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_recruitment" name="recruiteur" />
+        <menuitem id="menu_recruitment_recruiteur" parent="menu_recruitment" name="recruiteur" action="recruitment_recruiteur_action"/>
+
+        <record id="recruitment_recruiteur_form_view" model="ir.ui.view">
+            <field name="name">recruitment.recruiteur.form</field>
+            <field name="model">recruitment.recruiteur</field>
+            <field name="arch" type="xml">
+                <form string="Recruitment recruiteur">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="phone"/>
+                            <field name="depart_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="recruitment_recruiteur_tree_view" model="ir.ui.view">
+            <field name="name">recruitment.recruiteur.tree</field>
+            <field name="model">recruitment.recruiteur</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                            <field name="email"/>
+                            <field name="phone"/>
+                            <field name="depart_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+        
+
+</odoo>
